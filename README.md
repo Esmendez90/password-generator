@@ -12,7 +12,6 @@ As an employee with access to sensitive data, I want to randomly generate a pass
 * [Screenshots](#screenshots)
 * [Link to Page](#link-to-page)
 * [Tools](#tools)
-* [Takeaway](#takeaway)
 
 ## Motivation
 
@@ -34,25 +33,16 @@ The password application must have:
 * When all prompts are answered, then a password is generated that matches the selected criteria.
 * When the password is generated, then the password is either displayed in an alert or written to the page.
 
-
 ## Screenshots
 
-<img src="Images/password-generator.png" alt="Password Generator" width="50%" height="40%">
-
-alt="Home/About screenshot" width="30%" height="35%">
+<img src="Images/password-generator.png" alt="Password Generator" width="70%" height="60%">
 
 ## Link to Page
 
-<https://esmendez90.github.io/>
+<https://esmendez90.github.io/password-generator/>
 
 ## Tools
 
-* Bootstrap CSS Framework <https://getbootstrap.com/docs/5.0/getting-started/introduction/>.
 * Visual Studio Code <https://code.visualstudio.com>.
-* Markup Validation Service <https://validator.w3.org/>.
-
-## Takeaway
-
-This is a fun project that will help you see how a responsive layout is vital for a web application to render flawlessly on any screen size.
-
+* Chrome DevTools - Inspect
  
