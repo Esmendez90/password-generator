@@ -35,7 +35,7 @@ The password application must have:
 
 ## Screenshots
 
-<img src="Images/password-generator.png" alt="Password Generator" width="70%" height="60%">
+<img src="Images/password-generator.png" alt="Password Generator" width="90%" height="85%">
 
 ## Link to Page
 
