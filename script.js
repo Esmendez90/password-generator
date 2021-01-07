@@ -1,24 +1,25 @@
-// Assignment Code
 // GIVEN I need a new, secure password
 // need a button or link to get a new password
 // need to show the password on the page
 
+// Variable generateBtn will find (in the html) the element with an id of 'generate' 
 var generateBtn = document.querySelector("#generate");
+// When the user clicks on the element with an id of 'generate' it will execute the function called writePassword
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  // WHEN I click the button to generate a password
-  // THEN I am presented with a series of prompts for password criteria
+  
+  // After selecting the desired criteria for my password, 
+  // the password is written to the page in the area with an id of 'password'.
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  // WHEN the password is generated
-  // THEN the password is either displayed in an alert or written to the page
   passwordText.value = password;
 }
 
 // ************************ function here *********************************
-// write a function called generatePassword which will have a series of prompts for user input
+// Write a function called generatePassword which will have a series of prompts for user input
 function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -31,7 +32,7 @@ function generatePassword() {
   );
 
   // We have to check to make sure it is between 8 and 128
-  // otherwise, we tell user to fix their input.
+  // otherwise, we tell user to input a value greater than or equal to 8, and less than or equal to 128.
   if (userLength < 8 || userLength > 128) {
     alert("Please input a value between 8 and 128");
     return "";
@@ -49,7 +50,7 @@ function generatePassword() {
   var askNumber = confirm("do you want numbers?");
   var askSymbol = confirm("do you want symbols?");
 
-  // If no criteria is selected then we tell the user they have to choose at least one
+  // If no criteria is selected then we tell the user they have to choose at least one criteria
   if (!askUpperCase && !askLowerCase && !askNumber && !askSymbol) {
     alert("Choose at least one criteria");
     return "";
@@ -57,6 +58,7 @@ function generatePassword() {
 
   var randomPassword = "";
 
+  // Criteria chosen by the user will be stored into the variable called randomPassword
   if (askUpperCase) {
     randomPassword += upperCase;
   }
@@ -74,8 +76,8 @@ function generatePassword() {
   console.log(randomPassword);
 
   // WHEN all prompts are answered
-  // THEN a password is generated that matches the selected criteria
-  // from all the characters chosen, choose one randomly and add it to our password X number of times
+  // AND all the characters chosen, random characters will be added to our password X number of times,
+  // THEN a random password, composed of the characters the user selected, will be generated.
   var password = "";
   for (var i = 0; i < userLength; i++) {
     password =
@@ -87,5 +89,3 @@ function generatePassword() {
 }
 // ************************ function ends here *********************************
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
